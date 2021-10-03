@@ -12,9 +12,10 @@ public class DrapAndDropWithSelenide {
         //- Откройте https://the-internet.herokuapp.com/drag_and_drop
         open("https://the-internet.herokuapp.com/drag_and_drop");
 
-//- Перенесите прямоугольник А на место В
+        //- Перенесите прямоугольник А на место В
         $("#column-a").dragAndDropTo("#column-b");
-//- Проверьте, что прямоугольники действительно поменялись
+
+        //- Проверьте, что прямоугольники действительно поменялись
         $("#column-a").shouldHave(Condition.text("B"));
         $("#column-b").shouldHave(Condition.text("A"));
     }
